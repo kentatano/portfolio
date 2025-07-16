@@ -1,27 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>藤原工業株式会社 | 足場・土木・仮設工事</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>藤原工業株式会社</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- スプラッシュ -->
-    <div id="splash">
-        <img src="images/logo.png" alt="藤原工業ロゴ" id="splash-logo" />
+    <div class="splash-screen" id="splash">
+        <img src="logo.png" alt="ロゴ" class="splash-logo">
     </div>
-
-    <!-- ヘッダー -->
-    <header class="header">
-        <img src="images/logo.png" alt="ロゴ" class="logo" />
-        <h1 class="company-name">藤原工業株式会社</h1>
-        <div class="menu-icon">&#9776;</div>
-    </header>
-
-    <!-- ヒーロー背景 -->
-    <section class="hero" style="background-image: url('images/background.jpg');">
-    </section>
+    <div class="main-content" id="mainContent">
+        <header>
+            <img src="logo.png" alt="ロゴ" class="logo">
+            <h1>藤原工業株式会社</h1>
+            <nav>
+                <div class="menu-icon">☰</div>
+                <ul class="menu">
+                    <li><a href="#">企業理念</a></li>
+                    <li><a href="#">事業説明</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <img src="crane.jpg" alt="背景画像" class="bg-img">
+            <div class="overlay">
+                <h2>企業理念</h2>
+                <p>プロとしての誇りを胸に、ひとつひとつを丁寧に</p>
+                <p>私たちは目の前の仕事にまっすぐ向き合い、細心を込めて取り組みます</p>
+                <p>「これでいいか」ではなく「これなら自を持って届けられる」と思える仕事をやり抜きます</p>
+                <p>関わるすべての人に、安心と満足を届けられる存在でありたいと考えています</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

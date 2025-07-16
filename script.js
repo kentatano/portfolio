@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
+    setTimeout(() => {
         document.getElementById("splash").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
     }, 3000);
 });
