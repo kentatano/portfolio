@@ -1,67 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>藤原工業株式会社</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Z
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>藤原工業株式会社 | 足場・土木・仮設工事</title>
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.querySelector('.splash').style.display = 'none';
-            }, 3000);
-        });
-    </script>
 </head>
+
 <body>
-    <div class="splash">
-        <img src="images/logo.png" class="logo" alt="FUJIWARA KOGYO ロゴ">
+    <!-- スプラッシュ -->
+   <div class="splash">
+    <img src="images/main.jpg" class="logo" alt="FUJIWARA KOGYO ロゴ">
+</div>
+
+
+    <!-- ヘッダー -->
+ <header class="header">
+    <img src="images/main.jpg" alt="ロゴ" class="logo" />
+    <div class="header-text">
+        <h1 class="company-name">藤原工業株式会社</h1>
+        <p class="company-subtitle">FUJIWARA KOGYO</p>
     </div>
+    <div class="menu-icon">&#9776;</div>
+</header>
+  
 
-    <header>
-        <div class="header-container">
-            <img src="images/logo.png" alt="ロゴ" class="header-logo">
-            <h1>藤原工業株式会社</h1>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        </div>
-        <nav id="menu">
-            <ul>
-                <li><a href="#philosophy">企業理念</a></li>
-                <li><a href="#business">事業説明</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <!-- ヒーロー背景 -->
     <section class="hero">
-        <img src="images/logo.png" alt="背景画像" class="hero-image">
-        <div class="hero-text">
-            <img src="images/logo.png" alt="ロゴ" class="hero-logo">
-            <h1 class="hero-title">藤原工業株式会社</h1>
-        </div>
-    </section>
+    <img src="images/S__14016530_0.jpg" alt="背景画像" class="hero-image">
 
-    <section id="philosophy" class="philosophy">
-        <h2>企業理念</h2>
-        <p>プロとしての誇りを胸に、ひとつひとつを丁寧に</p>
-        <p>私たちは目の前の仕事にまっすぐ向き合い、細心を込めて取り組みます</p>
-    </section>
-
-    <section id="business" class="business">
-        <h2>事業説明</h2>
-        <p>足場工事、土木工事、仮設工事などの施工を通じて、安全で信頼ある現場環境を提供しています。</p>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
 </body>
+
 </html>
