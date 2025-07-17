@@ -218,3 +218,13 @@ body {
 body {
     background: url('images/S__14016530_0.jpg') no-repeat center center fixed;
 }
+
+
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo.spin {
+  animation: rotateLogo 1s ease-in-out;
+}

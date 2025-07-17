@@ -8,9 +8,23 @@
     <title>藤原工業株式会社 | 足場・土木・仮設工事</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+<script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.querySelector('.logo').classList.add('spin');
+        }, 3000);
+      });
+    </script>
 </head>
 
 <body>
+<nav>
+  <ul>
+    <li><a href="#philosophy">企業理念</a></li>
+    <li><a href="#services">事業説明</a></li>
+  </ul>
+</nav>
+        
     <!-- スプラッシュ -->
    <div class="splash">
     <img src="images/main.jpg" class="logo" alt="FUJIWARA KOGYO ロゴ">
@@ -32,6 +46,14 @@
     <section class="hero">
     <img src="images/S__14016530_0.jpg" alt="背景画像" class="hero-image">
 
+<section id="philosophy">
+  <h2>企業理念</h2>
+  <p>プロとしての誇りを胸に、ひとつひとつを丁寧に。</p>
+</section>
+<section id="services">
+  <h2>事業説明</h2>
+  <p>足場工事・土木工事・仮設工事など、現場を支える仕事を行っています。</p>
+</section>
 </body>
 
 </html>
