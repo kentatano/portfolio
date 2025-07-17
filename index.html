@@ -7,13 +7,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ロゴスプラッシュ -->
   <div id="splash" class="splash-screen">
-    <img src="logo.png" alt="ロゴ" class="logo">
+    <img src="images/logo.png" alt="ロゴ" class="logo">
   </div>
 
+  <!-- メインコンテンツ -->
   <div id="main-content">
-    <h1>藤原工業株式会社へようこそ</h1>
-    <p>これはロゴスプラッシュ専用バージョンのデモページです。</p>
+    <header>
+      <img src="images/logo.png" alt="ロゴ" class="header-logo">
+      <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#vision">企業理念</a></li>
+          <li><a href="#business">事業内容</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="vision" class="vision-section">
+      <div class="overlay">
+        <h1>企業理念</h1>
+        <p>私たちは誇りを持ってまっすぐ向き合い、信頼と実績を積み上げていきます。</p>
+      </div>
+    </section>
+
+    <section id="business" class="business-section">
+      <h2>事業内容</h2>
+      <p>足場工事・土木工事・仮設工事など、多様な分野に対応しています。</p>
+    </section>
   </div>
 
   <script>

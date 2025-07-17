@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  color: white;
   background-color: black;
+  color: white;
 }
 
 .splash-screen {
@@ -24,9 +24,77 @@ body {
   height: auto;
 }
 
-
-
 #main-content {
   display: none;
+}
+
+header {
+  position: relative;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.header-logo {
+  width: 150px;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  background-color: black;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border: 1px solid white;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.vision-section {
+  background: url("images/philosophy-bg.jpg") center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.vision-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2em;
+  border-radius: 10px;
+}
+
+.business-section {
+  padding: 4em 2em;
+  background-color: #111;
+  text-align: center;
 }
