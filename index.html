@@ -1,59 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Z
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>藤原工業株式会社 | 足場・土木・仮設工事</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
-<script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          document.querySelector('.logo').classList.add('spin');
-        }, 3000);
-      });
-    </script>
+  <meta charset="UTF-8">
+  <title>藤原工業株式会社</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<nav>
-  <ul>
-    <li><a href="#philosophy">企業理念</a></li>
-    <li><a href="#services">事業説明</a></li>
-  </ul>
-</nav>
-        
-    <!-- スプラッシュ -->
-   <div class="splash">
-    <img src="images/main.jpg" class="logo" alt="FUJIWARA KOGYO ロゴ">
-</div>
+  <div id="splash">
+    <img src="logo.png" alt="FUJIWARA KOGYO Logo" class="logo">
+  </div>
 
+  <div id="main-content" style="display: none;">
+    <header>
+      <h1>藤原工業株式会社</h1>
+    </header>
 
-    <!-- ヘッダー -->
- <header class="header">
-    <img src="images/main.jpg" alt="ロゴ" class="logo" />
-    <div class="header-text">
-        <h1 class="company-name">藤原工業株式会社</h1>
-        <p class="company-subtitle">FUJIWARA KOGYO</p>
-    </div>
-    <div class="menu-icon">&#9776;</div>
-</header>
-  
+    <section id="philosophy">
+      <div class="philosophy-text">
+        <h2>ー 企業理念 ー</h2>
+        <p>プロとしての誇りを胸に<br>ひとつひとつを丁寧に</p>
+        <p>私たちは目の前の仕事にまっすぐ向き合い、<br>細心を込めて取り組みます</p>
+        <p>「これでいいか」ではなく<br>「これなら自信を持って届けられる」と思える仕事をやり抜きます</p>
+        <p>関わるすべての人に、安心と満足を届けられる存在でありたいと考えています</p>
+      </div>
+    </section>
+  </div>
 
-    <!-- ヒーロー背景 -->
-    <section class="hero">
-    <img src="images/S__14016530_0.jpg" alt="背景画像" class="hero-image">
-
-<section id="philosophy">
-  <h2>企業理念</h2>
-  <p>プロとしての誇りを胸に、ひとつひとつを丁寧に。</p>
-</section>
-<section id="services">
-  <h2>事業説明</h2>
-  <p>足場工事・土木工事・仮設工事など、現場を支える仕事を行っています。</p>
-</section>
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      }, 3000);
+    };
+  </script>
 </body>
-
 </html>
