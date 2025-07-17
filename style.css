@@ -2,10 +2,11 @@
 body {
     margin: 0;
     font-family: "Arial", sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
+
 .splash {
     background-color: black;
     position: fixed;
@@ -16,14 +17,17 @@ body {
     align-items: center;
     z-index: 9999;
 }
+
 .splash .logo {
     width: 200px;
     animation: spin 1s ease-in-out 1;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 .header-container {
     background-color: black;
     color: white;
@@ -32,30 +36,57 @@ body {
     justify-content: space-between;
     padding: 1em;
 }
+
 .header-logo {
     height: 40px;
 }
+
 nav {
     display: none;
     background-color: black;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 nav ul li {
     padding: 10px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
-.hero img {
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
     width: 100%;
     height: auto;
+    display: block;
 }
-.philosophy {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 2em;
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 2em;
+    font-family: 'Zen Old Mincho', serif;
+    color: white;
 }

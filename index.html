@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藤原工業株式会社</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.splash').style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </head>
 <body>
     <div class="splash">
-        <img src="logo.png" class="logo" alt="FUJIWARA KOGYO ロゴ">
+        <img src="images/logo.png" class="logo" alt="FUJIWARA KOGYO ロゴ">
     </div>
+
     <header>
         <div class="header-container">
-            <img src="logo.png" alt="ロゴ" class="header-logo">
+            <img src="images/logo.png" alt="ロゴ" class="header-logo">
             <h1>藤原工業株式会社</h1>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
         </div>
@@ -24,9 +32,15 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero">
-        <img src="main.jpg" alt="クレーン画像">
+        <img src="images/main.jpg" alt="クレーン画像" class="hero-image">
+        <div class="hero-text">
+            <img src="images/logo.png" alt="ロゴ" class="hero-logo">
+            <h1 class="hero-title">藤原工業株式会社</h1>
+        </div>
     </section>
+
     <section id="philosophy" class="philosophy">
         <h2>企業理念</h2>
         <p>プロとしての誇りを胸に、ひとつひとつを丁寧に</p>
@@ -34,15 +48,21 @@
         <p>「これでいいか」ではなく、「これなら自信を持って届けられる」と思える仕事をやり抜きます</p>
         <p>関わるすべての人に、安心と満足を届けられる存在でありたいと考えています</p>
     </section>
+
+    <section id="business" class="business">
+        <h2>事業説明</h2>
+        <p>足場工事、土木工事、仮設工事などの施工を通じて、安全で信頼ある現場環境を提供しています。</p>
+    </section>
+
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
         }
-
-        setTimeout(() => {
-            document.querySelector('.splash').style.display = 'none';
-        }, 3000);
     </script>
 </body>
 </html>
