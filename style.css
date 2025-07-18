@@ -255,3 +255,23 @@ header.navbar {
     right: 10%;
   }
 }
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: black;
+  padding: 15px;
+  z-index: 999;
+  flex-direction: column;
+  text-align: left;
+  writing-mode: horizontal-tb; /* これで横書きに */
+}
+
+.menu a {
+  display: block;
+  color: white;
+  margin: 10px 0;
+  text-decoration: none;
+  writing-mode: horizontal-tb; /* 念のため各リンクにも */
+}
