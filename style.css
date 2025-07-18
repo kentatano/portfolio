@@ -247,8 +247,9 @@ header {
   }
 
   .menu-icon {
-    display: none;
-  }
+  padding-right: 10px;
+}
+
 }
 .video-section {
   width: 100%;
@@ -266,3 +267,15 @@ header {
 
 <video autoplay muted loop playsinline preload="auto">
 
+.video-section {
+  width: 100%;
+  margin-top: 60px;  /* ← ここで「潜り込み」を防止 */
+  overflow: hidden;
+}
+
+.video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
