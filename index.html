@@ -1,51 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>藤原工業株式会社</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar-left">
-      <img src="images/logo.png" alt="ロゴ" class="logo">
-    </div>
-    <div class="navbar-center">
-      <h1 class="site-title">藤原工業株式会社</h1>
-    </div>
-    <div class="navbar-right">
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-      <nav id="menu" class="menu">
-        <ul>
-          <li><a href="#top">トップ</a></li>
-          <li><a href="#service">事業内容</a></li>
-          <li><a href="#greeting">代表挨拶</a></li>
-          <li><a href="#recruit">採用情報</a></li>
-          <li><a href="#about">会社概要</a></li>
-          <li><a href="#news">新着情報</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
+  <!-- ロゴスプラッシュ -->
+  <div id="splash" class="splash-screen">
+    <img src="images/logo.png" alt="ロゴ" class="logo">
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div id="main-content">
+    <header>
+      <img src="images/logo.png" alt="ロゴ" class="header-logo">
+      <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#vision">企業理念</a></li>
+          <li><a href="#business">事業内容</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main style="padding-top: 80px;">
-    <section id="top">
-      <h2>トップページセクション</h2>
+    <section id="vision" class="vision-section">
+      <div class="overlay">
+        <h1>企業理念</h1>
+        <p>私たちは誇りを持ってまっすぐ向き合い、信頼と実績を積み上げていきます。</p>
+      </div>
     </section>
-  </main>
+
+    <section id="business" class="business-section">
+      <h2>事業内容</h2>
+      <p>足場工事・土木工事・仮設工事など、多様な分野に対応しています。</p>
+    </section>
+  </div>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "block";
-      }
-    }
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      }, 3000);
+    });
   </script>
 </body>
 </html>

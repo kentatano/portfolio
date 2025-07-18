@@ -1,74 +1,100 @@
 
-.navbar {
+body {
+  margin: 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background-color: black;
+  color: white;
+}
+
+.splash-screen {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #000;
+  left: 0;
+}
+
+.splash-screen .logo {
+  width: 200px;
+  height: auto;
+}
+
+#main-content {
+  display: none;
+}
+
+header {
+  position: relative;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  z-index: 1000;
+  background-color: black;
 }
 
-.logo {
-  height: 40px;
-}
-
-.site-title {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+.header-logo {
+  width: 150px;
 }
 
 .menu-icon {
-  font-size: 28px;
-  color: white;
+  font-size: 30px;
   cursor: pointer;
-  user-select: none;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 .menu {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 60px;
-  background-color: #111;
-  border: 1px solid #444;
-}
-
-.menu ul {
   list-style: none;
+  padding: 0;
   margin: 0;
+  display: none;
+  background-color: black;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border: 1px solid white;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
   padding: 10px 20px;
-}
-
-.menu ul li {
-  margin: 10px 0;
-}
-
-.menu ul li a {
-  color: white;
   text-decoration: none;
-  font-size: 16px;
+  color: white;
 }
 
-@media (min-width: 768px) {
-  .menu {
-    display: flex !important;
-    position: static;
-    background: none;
-    border: none;
-  }
+.vision-section {
+  background: url("images/philosophy-bg.jpg") center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  .menu ul {
-    display: flex;
-    gap: 20px;
-  }
+.vision-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+  border-radius: 10px;
+}
 
-  .menu-icon {
-    display: none;
-  }
+.business-section {
+  padding: 4em 2em;
+  background-color: #111;
+  text-align: center;
 }
