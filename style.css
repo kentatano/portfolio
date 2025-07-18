@@ -145,7 +145,7 @@ header.navbar {
 /* 共通調整 */
 .menu-icon {
   position: absolute;
-  right: 10px; /* ← 中央寄りに調整 */
+  right: 35px; /* ← 中央寄りに調整 */
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
@@ -198,6 +198,6 @@ header.navbar {
   }
 
   .menu-icon {
-    right: 25px; /* ← スマホでも中央寄りに */
+    right: 35px; /* ← スマホでも中央寄りに */
   }
 }
