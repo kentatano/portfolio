@@ -296,3 +296,33 @@ header {
   }
 }
 
+/* 最初は非表示（スマホ・PC共通） */
+.menu {
+  display: none;
+}
+
+/* 三本線クリック時に表示（共通） */
+#menu-toggle:checked ~ .menu {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: black;
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* PC用でメニューは非表示を保つ */
+@media (min-width: 769px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-icon {
+  position: absolute;
+  right: 35px; /* ← ここを調整！ */
+  top: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
