@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  background-color: black;
   color: white;
+  background-color: black;
 }
 
 .splash-screen {
@@ -24,77 +24,84 @@ body {
   height: auto;
 }
 
+
+
 #main-content {
   display: none;
+  padding: 2em;
 }
-
-header {
-  position: relative;
-  padding: 1em;
+/* ナビゲーションバー */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  padding: 0 20px;
+  z-index: 1000;
 }
 
-.header-logo {
-  width: 150px;
+.logo {
+  height: 40px;
+}
+
+.site-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .menu-icon {
-  font-size: 30px;
-  cursor: pointer;
+  font-size: 28px;
   color: white;
-}
-
-#menu-toggle {
-  display: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: none;
-  background-color: black;
   position: absolute;
+  right: 20px;
   top: 60px;
-  right: 10px;
-  border: 1px solid white;
-}
-
-#menu-toggle:checked + .menu-icon + .menu {
-  display: block;
-}
-
-.menu li {
-  margin: 0;
-}
-
-.menu li a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-}
-
-.vision-section {
-  background: url("images/philosophy-bg.jpg") center center / cover no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.vision-section .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2em;
-  border-radius: 10px;
-}
-
-.business-section {
-  padding: 4em 2em;
   background-color: #111;
-  text-align: center;
+  border: 1px solid #444;
 }
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu ul li {
+  margin: 10px 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex !important;
+    position: static;
+    background: none;
+    border: none;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+

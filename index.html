@@ -6,37 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- ロゴスプラッシュ -->
-  <div id="splash" class="splash-screen">
+<!-- ヘッダーセクション -->
+<header class="navbar">
+  <div class="navbar-left">
     <img src="images/logo.png" alt="ロゴ" class="logo">
   </div>
+  <div class="navbar-center">
+    <h1 class="site-title">藤原工業株式会社</h1>
+  </div>
+  <div class="navbar-right">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="#top">トップ</a></li>
+        <li><a href="#service">事業内容</a></li>
+        <li><a href="#greeting">代表挨拶</a></li>
+        <li><a href="#recruit">採用情報</a></li>
+        <li><a href="#about">会社概要</a></li>
+        <li><a href="#news">新着情報</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+</script>
 
-  <!-- メインコンテンツ -->
+<body>
+  <div id="splash" class="splash-screen">
+    <img src="logo.png" alt="ロゴ" class="logo">
+  </div>
+
   <div id="main-content">
-    <header>
-      <img src="images/logo.png" alt="ロゴ" class="header-logo">
-      <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <li><a href="#vision">企業理念</a></li>
-          <li><a href="#business">事業内容</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="vision" class="vision-section">
-      <div class="overlay">
-        <h1>企業理念</h1>
-        <p>私たちは誇りを持ってまっすぐ向き合い、信頼と実績を積み上げていきます。</p>
-      </div>
-    </section>
-
-    <section id="business" class="business-section">
-      <h2>事業内容</h2>
-      <p>足場工事・土木工事・仮設工事など、多様な分野に対応しています。</p>
-    </section>
+    <h1>藤原工業株式会社へようこそ</h1>
+    <p>これはロゴスプラッシュ専用バージョンのデモページです。</p>
   </div>
 
   <script>
