@@ -158,3 +158,67 @@ header.navbar {
     display: block;
   }
 }
+/* ===== 三本線の位置調整・スマホメニュー対応 ===== */
+
+/* 共通調整 */
+.menu-icon {
+  position: absolute;
+  right: 10px; /* ← 中央寄りに調整 */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* メニューの表示制御 */
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+/* メニュー初期非表示 */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: black;
+  border: 1px solid white;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* モバイル調整 */
+@media (max-width: 767px) {
+  .menu {
+    width: 80%;
+    right: 10%;
+  }
+
+  .site-title {
+    font-size: 16px;
+  }
+
+  .header-logo {
+    height: 30px;
+  }
+
+  .menu-icon {
+    right: 25px; /* ← スマホでも中央寄りに */
+  }
+}
