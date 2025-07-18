@@ -201,3 +201,57 @@ header.navbar {
     right: 35px; /* ← スマホでも中央寄りに */
   }
 }
+/* --- 共通（三本線の位置） --- */
+.menu-icon {
+  position: absolute;
+  right: 25px; /* ← PCでもスマホでも中央寄り */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* --- スマホメニュー開閉制御 --- */
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+/* --- メニュー本体 --- */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  background-color: black;
+  border: 1px solid white;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* --- スマホ用調整 --- */
+@media (max-width: 767px) {
+  .menu-icon {
+    right: 25px;
+  }
+
+  .menu {
+    width: 80%;
+    right: 10%;
+  }
+}
