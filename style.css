@@ -112,8 +112,9 @@ header {
   z-index: 1000;
 }
 
-.navbar-left .header-logo {
-  height: 30px;
+.header-logo {
+  height: 40px;
+  width: auto; /* 横幅は自動で比率維持 */
 }
 
 .navbar-center {
