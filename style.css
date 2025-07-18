@@ -251,22 +251,13 @@ header {
 }
 
 }
-.video-section {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+.navbar-right {
+  padding-right: 10px;
 }
 
-.video-section video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.navbar-right {
+  padding-right: 10px;
 }
-
-<video autoplay muted loop playsinline preload="auto">
-
 .video-section {
   width: 100%;
   margin-top: 60px;  /* ← ここで「潜り込み」を防止 */
