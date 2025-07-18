@@ -263,3 +263,6 @@ header {
   display: block;
   object-fit: cover;
 }
+
+<video autoplay muted loop playsinline preload="auto">
+
