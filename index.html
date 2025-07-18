@@ -1,21 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>藤原工業株式会社</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>藤原工業株式会社</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><img src="assets/logo.png" alt="FUJIWARA KOGYO ロゴ" /></div>
-        <div class="title">藤原工業株式会社</div>
-        <div class="menu">&#9776;</div>
-    </header>
-    <main>
-        <section class="dummy-content">
-            <p>ここにコンテンツが入ります。</p>
-        </section>
-    </main>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="images/logo.png" alt="ロゴ" class="logo">
+    </div>
+    <div class="navbar-center">
+      <h1 class="site-title">藤原工業株式会社</h1>
+    </div>
+    <div class="navbar-right">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="#top">トップ</a></li>
+          <li><a href="#service">事業内容</a></li>
+          <li><a href="#greeting">代表挨拶</a></li>
+          <li><a href="#recruit">採用情報</a></li>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#news">新着情報</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+    <section id="top">
+      <h2>トップページセクション</h2>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
