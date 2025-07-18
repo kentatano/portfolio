@@ -191,3 +191,62 @@ header {
 #menu-toggle:checked ~ .menu {
   display: block;
 }
+.navbar {
+  height: auto;
+  padding: 10px 20px; /* 上下に余裕 */
+  min-height: 70px;   /* 保険として最小高さを指定 */
+}
+/* 三本線＆開閉 */
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: black;
+  border: 1px solid white;
+  list-style: none;
+  padding: 10px 0;
+}
+
+#menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+/* PCでは横並び表示に切り替え */
+@media (min-width: 768px) {
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .menu li {
+    margin-left: 20px;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
