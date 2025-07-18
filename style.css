@@ -260,7 +260,7 @@ header {
 }
 .video-section {
   width: 100%;
-  margin-top: 60px;  /* ← ここで「潜り込み」を防止 */
+  margin-top: 65px;  /* ← ここで「潜り込み」を防止 */
   overflow: hidden;
 }
 
@@ -270,3 +270,24 @@ header {
   display: block;
   object-fit: cover;
 }
+@media (max-width: 600px) {
+  .menu-icon {
+    padding-right: 15px;
+  }
+}
+<header class="navbar">
+  <div class="navbar-left">
+    <img src="images/logo.png" alt="ロゴ" class="header-logo">
+  </div>
+  <div class="navbar-center">
+    <span class="site-title">藤原工業株式会社</span>
+  </div>
+  <div class="navbar-right">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="#top">トップ</a></li>
+      <!-- 以下略 -->
+    </ul>
+  </div>
+</header>
