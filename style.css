@@ -223,32 +223,29 @@ header {
   display: block;
 }
 
-/* PCでは横並び表示に切り替え */
+
 @media (min-width: 768px) {
   .menu {
+    display: none !important;
+  }
+
+  #menu-toggle:checked ~ .menu {
     display: flex !important;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    background: none;
-    border: none;
-    padding: 0;
-    margin-left: auto;
-  }
-
-  .menu li {
-    margin-left: 20px;
-  }
-
-  .menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    flex-direction: column;
+    background-color: black;
+    z-index: 999;
   }
 
   .menu-icon {
-  padding-right: 10px;
+    display: block;
+    position: absolute;
+    right: 15px;
+  }
 }
+
 
 }
 .navbar-right {
@@ -325,4 +322,8 @@ header {
   font-size: 30px;
   cursor: pointer;
   z-index: 1001;
+}
+.menu-icon {
+  right: 30px;
+  top: 15px;
 }
