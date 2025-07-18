@@ -24,8 +24,7 @@
   <div class="navbar-right">
    <input type="checkbox" id="menu-toggle">
 <label for="menu-toggle" class="menu-icon">&#9776;</label>
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="menu-icon">&#9776;</label>
+
 
 <ul class="menu">
   <li><a href="#top">トップ</a></li>
@@ -36,16 +35,16 @@
   <li><a href="#news">新着情報</a></li>
   <li><a href="#contact">お問い合わせ</a></li>
 </ul>
-<!-- イメージ動画セクション -->
-<section id="hero-video" class="video-section">
-  <video autoplay muted loop playsinline>
-    <source src="videos/your-video.mp4" type="video/mp4" />
-    お使いのブラウザは video タグをサポートしていません。
-  </video>
-</section>
+<video id="hero-video" autoplay muted loop playsinline>
+  <source src="videos/your-video.mp4" type="video/mp4" />
+</video>
 
+<script>
+  const video = document.getElementById('hero-video');
+  video.playbackRate = 0.5;  // 再生速度を0.5倍に
+</script>
 
-</header>
+<body>
 
 
     <section id="vision" class="vision-section">
