@@ -1,140 +1,41 @@
 
-body {
-  margin: 0;
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  background-color: black;
-  color: white;
-}
-
-.splash-screen {
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.splash-screen .logo {
-  width: 200px;
-  height: auto;
-}
-
-#main-content {
-  display: none;
-}
-
-header {
-  position: relative;
-  padding: 1em;
+/* --- トップバナーの基本設定 --- */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-}
-
-.header-logo {
-  width: 150px;
-}
-
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  background-color: black;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  border: 1px solid white;
-}
-
-#menu-toggle:checked + .menu-icon + .menu {
-  display: block;
-}
-
-.menu li {
-  margin: 0;
-}
-
-.menu li a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-}
-
-.vision-section {
-  background: url("images/philosophy-bg.jpg") center center / cover no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.vision-section .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2em;
-  border-radius: 10px;
-}
-
-.business-section {
-  padding: 4em 2em;
-  background-color: #111;
-  text-align: center;
-}
-/* トップバナー */
-.navbar {
   position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
   z-index: 1000;
+  padding: 0 15px;
 }
 
-.header-logo {
+.navbar-left .header-logo {
   height: 40px;
-  width: auto; /* 横幅は自動で比率維持 */
 }
 
-.navbar-center {
-  flex: 1;
-  text-align: center;
-}
-
-.site-title {
-  font-size: 18px;
-  font-weight: bold;
+.navbar-center .site-title {
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .menu-icon {
   font-size: 28px;
   color: white;
   cursor: pointer;
-  user-select: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
 }
 
+/* 初期状態ではメニュー非表示 */
 #menu-toggle {
   display: none;
 }
@@ -145,85 +46,29 @@ header {
   top: 60px;
   right: 10px;
   background-color: black;
-  border: 1px solid white;
   list-style: none;
   margin: 0;
   padding: 10px 0;
-  z-index: 9999;
+  border: 1px solid white;
+  z-index: 999;
+}
+
+.menu li {
+  padding: 10px 20px;
 }
 
 .menu li a {
   color: white;
   text-decoration: none;
-  display: block;
-  padding: 10px 20px;
+  font-size: 16px;
 }
 
-#menu-toggle:checked + .menu-icon + .menu {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .menu {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    border: none;
-    background: none;
-  }
-
-  .menu li {
-    margin-left: 20px;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-}
-#menu-toggle {
-  display: none;
-}
-
-.menu {
-  display: none;
-}
-
-#menu-toggle:checked ~ .menu {
-  display: block;
-}
-.navbar {
-  height: auto;
-  padding: 10px 20px; /* 上下に余裕 */
-  min-height: 70px;   /* 保険として最小高さを指定 */
-}
-/* 三本線＆開閉 */
-.menu-icon {
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  display: block;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: black;
-  border: 1px solid white;
-  list-style: none;
-  padding: 10px 0;
-}
-
+/* 三本線チェック時にメニュー表示 */
 #menu-toggle:checked ~ .menu {
   display: block;
 }
 
-
+/* --- PC表示 --- */
 @media (min-width: 768px) {
   .menu {
     display: none !important;
@@ -232,98 +77,17 @@ header {
   #menu-toggle:checked ~ .menu {
     display: flex !important;
     position: absolute;
+    right: 15px;
     top: 60px;
-    right: 10px;
     flex-direction: column;
     background-color: black;
-    z-index: 999;
+  }
+
+  .menu li {
+    margin-left: 0;
   }
 
   .menu-icon {
     display: block;
-    position: absolute;
-    right: 15px;
   }
-}
-
-
-}
-.navbar-right {
-  padding-right: 10px;
-}
-
-.navbar-right {
-  padding-right: 10px;
-}
-.video-section {
-  width: 100%;
-  margin-top: 65px;  /* ← ここで「潜り込み」を防止 */
-  overflow: hidden;
-}
-
-.video-section video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-@media (max-width: 600px) {
-  .menu-icon {
-    padding-right: 15px;
-  }
-}
-@media (min-width: 768px) {
-  .menu {
-    display: none;
-  }
-
-  #menu-toggle:checked ~ .menu {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 25px;
-    background: black;
-    z-index: 999;
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    right: 15px;
-  }
-}
-
-/* 最初は非表示（スマホ・PC共通） */
-.menu {
-  display: none;
-}
-
-/* 三本線クリック時に表示（共通） */
-#menu-toggle:checked ~ .menu {
-  display: block;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: black;
-  padding: 10px;
-  z-index: 1000;
-}
-
-/* PC用でメニューは非表示を保つ */
-@media (min-width: 769px) {
-  .menu {
-    display: none;
-  }
-}
-.menu-icon {
-  position: absolute;
-  right: 35px; /* ← ここを調整！ */
-  top: 15px;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1001;
-}
-.menu-icon {
-  right: 30px;
-  top: 15px;
 }
